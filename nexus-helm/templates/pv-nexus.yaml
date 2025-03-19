@@ -3,10 +3,11 @@ kind: PersistentVolume
 metadata:
   name: nexus-pv
 spec:
-  storageClassName: standard
+  storageClassName: gp3-csi
   capacity:
-    storage: {{ .Values.nexus.storage.size }}
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: "/mnt/data/nexus"
