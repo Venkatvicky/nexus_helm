@@ -1,7 +1,7 @@
 nexus:
   image: sonatype/nexus3:latest
   service:
-    type: ClusterIP
+    type: LoadBalancer
     port: 8081
   storage:
     size: 10Gi
