@@ -1,14 +1,13 @@
-postgresql:
-    apiVersion: v1
-    kind: PersistentVolume
-    metadata:
-      name: postgresql-pv
-    spec:
-      storageClassName: gp3-csi
-      capacity:
-        storage: 5Gi
-      accessModes:
-        - ReadWriteOnce
-      persistentVolumeReclaimPolicy: Retain
-      hostPath:
-        path: "/mnt/data/postgresql"
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgresql-pv
+spec:
+  storageClassName: gp3-csi
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/data/postgresql"
