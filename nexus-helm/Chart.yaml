@@ -3,4 +3,4 @@ name: nexus
 description: Helm chart for deploying Nexus with PostgreSQL
 type: application
 version: 1.0.0
-appVersion: "3.65.0"  # Nexus latest version
+appVersion: "3.65.0"
